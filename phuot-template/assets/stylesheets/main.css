@@ -1,0 +1,609 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+*,
+*:before,
+*:after {
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+			box-sizing: border-box;
+	-webkit-transition: all .5s ease;
+		 -o-transition: all .5s ease;
+			transition: all .5s ease;
+}
+.clearfix:before,
+.clearfix:after {
+	content: "";
+	display: table;
+}
+.clearfix:after {
+	clear: both;
+}
+.clearfix {
+	*zoom: 1;
+}
+
+/*
+	==================================
+	Grid
+	==================================
+*/
+
+.grid,
+.container {
+	width: 100%;
+	min-width: 320px;
+}
+.grid-images {
+	font-size: 0;
+}
+.grid-images-item {
+	position: relative;
+}
+.col-1-3,
+.col-1-4,
+.col-2-3 {
+	vertical-align: top;
+}
+.col-1-3,
+.col-2-3 {
+	width: 100%;
+}
+.col-1-4 {
+	width: 50%;
+	display: inline-block;	
+}
+
+/*
+	=================================
+	Title cover images
+	=================================
+*/
+figure {
+	/*background: #000;*/
+	font-size: 0;
+}
+figure img {
+	width: 100%;
+}
+figcaption {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	font-size: 24px;
+	font-weight: 700;
+	color: #fff;
+}
+figcaption:hover {
+	background: rgba(0, 0, 0, .2);
+}
+figcaption:before {
+	content: " ";
+	height: 100%;
+	margin-right: -.25em;
+	display: inline-block;
+	vertical-align: middle;
+}
+.title {
+	display: inline-block;
+	vertical-align: middle;
+}
+/*
+	==================================
+	Typography
+	==================================
+*/
+
+body {
+	font: 16px Arial, sans-serif;
+	color: #292929;
+	text-align: center;
+}
+h2, h3 {
+	margin: 30px 0;
+}
+h1 {
+	font-size: 40px;
+	margin-bottom: 30px;
+	line-height: 45px;
+}
+h2 {
+	font-size: 32px;
+}
+h3 {
+	font-size: 24px;
+}
+p {
+	margin: 15px 0;
+}
+
+/*
+	==================================
+	Links
+	==================================
+*/
+
+a {
+	text-decoration: none;
+}
+
+/*
+	==================================
+	Buttons
+	==================================
+*/
+
+.btn {
+	color: #fa8957;
+	margin-top: 15px;
+	cursor: pointer;
+}
+.btn:hover {
+	color: #fc7f12;
+	text-decoration: underline;
+}
+.btn-top {
+	display: none;
+}
+.btn-top a {
+	display: inline-block;
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	background: #f34421;
+	background: rgba(243, 68, 33, .7);
+	border-radius: 50%;
+	color: #fff;
+	position: fixed;
+	right: 10px;
+	bottom: 10px;
+	z-index: 1000;
+}
+.btn-top a:hover {
+	background: #f34421;
+}
+
+/*
+	==================================
+	Carousel
+	==================================
+*/
+
+.carousel {
+	position: relative;
+}
+.slider,
+.item-slider {
+	width: 100%;
+	height: 450px;
+}
+.item-slider {
+	display: none;
+}
+.item-slider-active {
+	display: block;
+}
+.item-slider-01,
+.item-slider-02,
+.item-slider-03,
+.item-slider-04 {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+.item-slider-01 {
+	background: url("../images/slide_01.jpg") 50% 50% / cover no-repeat;
+}
+.item-slider-02 {
+	background: url("../images/slide_02.jpg") 50% 50% / cover no-repeat;
+}
+.item-slider-03 {
+	background: url("../images/slide_03.jpg") 50% 50% / cover no-repeat;
+}
+.item-slider-04 {
+	background: url("../images/slide_04.jpg") 50% 50% / cover no-repeat;
+}
+.dots,
+.narrows {
+	display: none;
+}
+.item-dot {
+	height: 10px;
+	width: 10px;
+	border-radius: 50%;
+	background: #4a4948;
+	display: inline-block;
+	margin-right: 10px;	
+}
+.item-dot:last-child {
+	margin-right: 0;
+}
+.item-dot-active {
+	background: #fff;
+}
+.next-narrow,
+.prev-narrow {
+	height: 60px;
+	width: 60px;
+	border: 5px solid #fff;
+	border-radius: 50%;
+	font-size: 40px;
+	color: #fff;
+	display: inline-block;
+	position: absolute;
+	top: 300px;
+	z-index: 1000;
+	cursor: pointer;
+}
+.next-narrow {
+	right: 5%;
+}
+.prev-narrow {
+	left: 5%;
+}
+.search {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: rgba(0, 0, 0, .5);
+}
+.highlight {
+	background: none;
+}
+.search:before {
+	content: "";
+	height: 100%;
+	margin-right: -.25em;
+	display: inline-block;
+	vertical-align: middle;
+}
+.search-center {
+	display: inline-block;
+	vertical-align: middle;
+	width: 90%;
+}
+.search .btn-search {
+	display: inline-block;
+	vertical-align: top;
+	height: 40px;
+	width: 40px;
+	font-size: 0;
+	background: #f34421 url("../images/search.png") 0 0 no-repeat;
+	background-size: cover;
+	cursor: pointer;	
+}
+.search input {
+	border: 0;
+	height: 40px;
+	width: 70%;
+	padding-left: 14px;
+	vertical-align: top;
+	font-size: 16px;	
+}
+.login {
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 1000;
+}
+.login li {
+	display: inline-block;
+}
+.login a {
+	display: block;
+	color: #fff;
+	padding: 10px 15px;
+}
+.login a:hover {
+	color: #dad9db;
+}
+
+/*
+	===================================
+	Navigation
+	===================================
+*/
+
+nav {
+	text-align: right;
+	margin-top: 50px;
+}
+.btn-nav {
+	font-size: 36px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	padding: 0 10px;
+	margin-right: 40px;
+	cursor: pointer;
+}
+.btn-nav:hover {
+	background: #000;
+	color: #fff;
+	border: 0;
+}
+nav ul {
+	display: block;
+	width: 100%;
+	background: #000;
+	clear: both;
+	text-align: left;
+}
+nav ul {
+	display: none;
+}
+nav ul li {
+	border-bottom: 1px solid #b5b5b5;
+}
+nav ul li:last-child {
+	border-bottom: 0;
+}
+nav ul a {
+	display: block;
+	padding: 15px 20px;
+	color: #fff;	
+}
+nav ul a:hover {
+	background: #3b3b3b;
+}
+
+/*
+	===================================
+	Header
+	===================================
+*/
+
+.logo {
+	float: left;
+}
+.login,
+.search {
+	color: #fff;
+}
+
+/*
+	===================================
+	Destinations List
+	===================================
+*/
+
+.offset-style ul {
+	text-align: left;
+	padding-left: 50px;
+}
+.offset-style li {
+	padding-bottom: 5px;
+}
+.offset-style li a {
+	color: #fa8957;
+}
+.offset-style li a:hover {
+	text-decoration: underline;
+}
+
+/*
+	===================================
+	Tools and Communication
+	===================================
+*/
+
+.offset-style figcaption{
+	font-size: 0;
+}
+.offset-style span {
+	font-size: 16px;
+	width: 80%;
+	font-weight: 700;
+}
+
+/*
+	===================================
+	Footer
+	===================================
+*/
+
+footer {
+	background: #000a10;
+	padding-top: 15px;
+	color: #8e8d8d;
+	text-align: left;
+	font-size: 14px;
+	margin-top: 20px;
+}
+footer .grid {
+	padding-left: 15px;
+}
+footer ul li {
+	padding-bottom: 5px;
+}
+footer li:last-child {
+	padding-bottom: 0;
+}
+footer a {
+	color: #8e8d8d;
+}
+footer a:hover {
+	color: #dcdedf;
+}
+.social-icon li {
+	display: inline-block;
+	padding-bottom: 0;
+}
+.social-icon a {
+	display: block;
+	padding-right: 10px;
+}
+.copyright {
+	background: #01111c;
+	text-align: center;
+	font-size: 12px;
+	line-height: 20px;
+	margin-top: 15px;
+	padding: 20px 0;
+}
+/*
+	==================================
+	Solution great than 480px 
+	==================================
+*/
+
+@media screen and (min-width: 481px) {
+	.grid {
+		padding: 0 1%;
+	}
+	.col-1-3,
+	.col-2-3,
+	.col-1-4 {
+		display: inline-block;
+		padding: 1%;
+	}
+	.col-2-3 {
+		width: 66.6666%;
+	}
+	.col-1-3 {
+		width: 33.3333%;
+	}
+	.col-1-4 {
+		width: 25%;
+	}
+}
+
+/*
+	====================================
+	Solution great than 768px
+	====================================
+*/
+
+@media screen and (min-width: 769px) {
+	.clearfix {
+		width: 95%;
+		margin: 0 auto;
+	}
+	.grid {
+		width: 80%;
+		margin: 0 auto;
+	}
+	.login {
+		margin-right: 2.5%
+	}
+	.btn-nav {
+		display: none;
+	}
+	.active-nav a {
+		background: #000;
+		color: #fff;
+	}
+	nav ul {
+		display: block;
+		background: none;
+		clear: inherit;
+		text-align: right;
+	}
+	nav ul li {
+		display: inline-block;
+		border-bottom: 0;
+	}
+	nav ul a {
+		color: #8e8d8d;
+	}
+	nav ul a:hover {
+		color: #fff;
+		background: #000;
+	}
+	.slider,
+	.item-slider {
+		height: 550px;
+	}
+	.search input {
+		width: 50%;
+	}
+	.search-center {
+		width: 70%;
+	}
+	.search h1 {
+		font-size: 64px;
+		line-height: 64px;
+	}
+	.search p {
+		font-size: 22px;
+		margin-top: 25px;
+		margin-bottom: 20px;
+	}
+	.dots,
+	.narrows {
+		display: block;		
+	}
+	.dots {		
+		left: 50%;
+		margin-left: -41px;
+		bottom: 20px;
+		z-index: 1000;
+		position: absolute;
+	}	
+}
+@media screen and (min-width: 1367px) {
+	.slider,
+	.item-slider {
+		height: 700px;
+	}
+	.grid {
+		max-width: 70%;
+	}
+	.search input {
+		width: 35%;
+	}
+
+}

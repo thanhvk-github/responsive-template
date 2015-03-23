@@ -1,0 +1,96 @@
+/* Layout */
+.grid {
+	width: 100%;
+	font-size: 0
+}
+.grid-col-1-2 {
+	width: 50%;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+/* Typography */
+.features .glyphicon {
+	font-size: 32px;
+}
+
+/* header */
+.jumbotron {
+	height: 450px;
+	color: #fff;
+	background: #4f024f;
+	background: -webkit-linear-gradient(to right bottom, #d904d9, #4f024f);
+	background:    -moz-linear-gradient(to right bottom, #d904d9, #4f024f);
+	background:        -linear-gradient(to right bottom, #d904d9, #4f024f);
+}
+.jumbotron img {
+	width: 80px;
+}
+
+/* features */
+.features div.offset {
+	padding: 30px 40px;
+}
+#css,
+#components,
+#javascript {
+	color: #fff;	
+}
+#css {
+	background: #5CBEF2;
+}
+#components {
+	background: #98F25C;
+}
+#javascript {
+	background: #F2C55C;
+}
+
+/* Content */
+.content {
+	padding: 25px 0;
+	color: #8b8b8c;
+}
+.content img {
+	width: 100%;
+}
+.content div.offset {
+	padding: 0 5%;
+}
+.grid-row {
+	position: relative;
+}
+.center {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+}
+.center:before {
+	content: "";
+	height: 100%;
+	margin-right: -.25em;
+	display: inline-block;
+	vertical-align: middle;
+}
+.center-content {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+/* Footer */
+footer {
+	padding: 35px 0;
+	background: #2a3744;
+	color: #fff;
+}
+
+/* Responsive */
+@media only screen and (max-width: 767px) {
+	.grid-col-1-2 {
+		width: 100%;	
+	}
+	.center {
+		position: relative;
+	}
+}
